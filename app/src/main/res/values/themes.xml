@@ -3,4 +3,7 @@
     <style name="Theme.MyApplication" parent="Theme.MaterialComponents">
 
     </style>
+    <style name="Theme.UnitConversion" parent="Theme.AppCompat">
+
+    </style>
 </resources>

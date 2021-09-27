@@ -3,14 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".UnitConversion">
+    tools:context=".Length">
 
-    <Button
+    <Spinner
+        android:id="@+id/convertFromSpinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableTop="@drawable/ic_action_name"
-        android:text="@string/length"
-        android:layout_marginLeft="5dp"
-        android:id="@+id/lengthButton"/>
+        />
 
 </RelativeLayout>

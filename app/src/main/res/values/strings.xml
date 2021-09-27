@@ -2,5 +2,20 @@
     <string name="app_name">My Application</string>
     <string name="unit_conversion">Unit Conversion</string>
     <string name="equations">Equations</string>
+    <string name="length">Length</string>
+    <string-array name="convertFromArray">
+        <item>Terametres (10^12)</item>
+        <item>Gigametres (10^9)</item>
+        <item>Megametres (10^6)</item>
+        <item>Kilometres (10^3)</item>
+        <item>Metres (10^0)</item>
+        <item>Decimetres (10^-1)</item>
+        <item>Centimetres (10^-2)</item>
+        <item>Millimetres (10^-3)</item>
+        <item>Micrometres (10^-6)</item>
+        <item>Nanometres (10^-9)</item>
+        <item>Picometres (10^-12)</item>
+        <item>Femtometres (10^-15)</item>
+    </string-array>
 
 </resources>
