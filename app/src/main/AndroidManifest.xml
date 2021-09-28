@@ -20,12 +20,15 @@
         </activity>
         <activity android:name=".UnitConversion"
             android:label="@string/unit_conversion"
-            android:theme="@style/Theme.UnitConversion">
+            android:theme="@style/Theme.UnitConversion"
+            android:exported="true">
         </activity>
         <activity android:name=".Equations"
+            android:exported="true"
             android:label="@string/equations">
         </activity>
         <activity
+            android:exported="true"
             android:name=".Length"
             android:label="@string/length">
 
