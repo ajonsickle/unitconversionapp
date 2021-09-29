@@ -68,6 +68,9 @@ public class Length extends Activity {
                 case "Nanometres (10^-9)":
                     d = (Double.parseDouble(input) / 1000000000);
                     break;
+                case "Miles":
+                    d = (Double.parseDouble(input) * 1609);
+                    break;
                 default:
                     d = 0;
                     break;
@@ -118,6 +121,9 @@ public class Length extends Activity {
             case "Nanometres (10^-9)":
                 d = b * 1000000000;
                 break;
+            case "Miles":
+                d = b / 1609;
+                break;
             default:
                 d = 0;
                 break;
@@ -161,6 +167,9 @@ public class Length extends Activity {
         convertFromSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                double number = convertFromMetres(resultSpinner, convertToMetres(convertFromSpinner, convertFromValueInput));
+                number = Math.round(number * 100.0);
+                number = number/100.0;
                 resultTextView.setText(Double.toString(convertFromMetres(resultSpinner, convertToMetres(convertFromSpinner, convertFromValueInput))));
             }
 

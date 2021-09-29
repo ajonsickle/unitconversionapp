@@ -8,6 +8,7 @@
     <string name="result">Result:</string>
     <string-array name="convertFromArray">
         <item>Inches</item>
+        <item>Miles</item>
         <item>Metres (10^0)</item>
         <item>Centimetres (10^-2)</item>
         <item>Millimetres (10^-3)</item>
