@@ -10,4 +10,18 @@
     <color name="orange">#FF5722</color>
     <color name="darknavy">#192841</color>
     <color name="navy">#000080</color>
+    <color name="purpleStart">#D27BFF</color>
+    <color name="purpleMiddle">#9246B4</color>
+    <color name="purpleEnd">#511069</color>
+    <color name="greenStart">#6CFF95</color>
+    <color name="greenMiddle">#3C8E9A</color>
+    <color name="greenEnd">#1E524E</color>
+    <color name="greyAccent">#afb9c5</color>
+    <color name="whiteishBorder">#DAD2CA</color>
+    <color name="redBackground">#5a020b</color>
+    <color name="redAccent">#ff0000</color>
+    <color name="greenBackground">#013300</color>
+    <color name="greenAccent">#2ffd64</color>
+    <color name="purpleBackground">#330133</color>
+    <color name="purpleAccent">#de00de</color>
 </resources>

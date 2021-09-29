@@ -11,7 +11,7 @@
         android:layout_width="150dp"
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="300dp"
         android:text="@string/unit_conversion" />
 
     <Button
@@ -20,7 +20,15 @@
         android:layout_height="100dp"
         android:text="@string/equations"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="100dp"
+        />
+    <Button
+        android:id="@+id/calculatorButton"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:text="@string/calculator"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="500dp"
         />
 
 </RelativeLayout>

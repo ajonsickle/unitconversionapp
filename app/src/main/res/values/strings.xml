@@ -6,6 +6,28 @@
     <string name="enter_value_to_convert_from">Enter value to convert from</string>
     <string name="enter_value_to_convert_to">Enter value to convert to</string>
     <string name="result">Result:</string>
+    <string name="calculator">Calculator</string>
+    <string name="equalsString">=</string>
+    <string name="decimalString">.</string>
+    <string name="deleteString">⌫</string>
+    <string name="zeroString">0</string>
+    <string name="plusString">+</string>
+    <string name="threeString">3</string>
+    <string name="twoString">2</string>
+    <string name="oneString">1</string>
+    <string name="minusString">-</string>
+    <string name="sixString">6</string>
+    <string name="sevenString">7</string>
+    <string name="eightString">8</string>
+    <string name="fiveString">5</string>
+    <string name="fourString">4</string>
+    <string name="multiplyString">x</string>
+    <string name="multiplyString1">×</string>
+    <string name="nineString">9</string>
+    <string name="divideString">÷</string>
+    <string name="rightBracket">)</string>
+    <string name="leftBracket">(</string>
+    <string name="clearButton">C</string>
     <string-array name="convertFromArray">
         <item>Inches</item>
         <item>Miles</item>

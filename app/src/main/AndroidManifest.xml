@@ -33,6 +33,12 @@
             android:label="@string/length">
 
         </activity>
+        <activity
+            android:exported="true"
+            android:name=".Calculator"
+            android:label="@string/calculator">
+
+        </activity>
     </application>
 
 </manifest>
