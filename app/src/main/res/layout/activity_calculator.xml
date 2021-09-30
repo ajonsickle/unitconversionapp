@@ -12,20 +12,23 @@
         android:id="@+id/previousEquation"
         android:layout_width="59dp"
         android:layout_height="22dp"
-        android:text="TextView"
+        android:text=" "
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.828" />
 
-    <EditText
+    <TextView
         android:id="@+id/editTextTextPersonName"
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="48dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Enter value"
-        android:gravity="right"
+        android:layout_marginBottom="10dp"
+        android:text=" "
+        android:gravity="right|center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:background="@drawable/textview_border"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -49,7 +52,7 @@
             android:textSize="30sp"
             app:layout_constraintStart_toEndOf="@+id/decimalButton"
             app:layout_constraintTop_toBottomOf="@+id/button27"
-            android:background="@drawable/button_background"/>
+            android:background="@drawable/equals_background"/>
 
         <Button
             android:id="@+id/decimalButton"
@@ -70,7 +73,7 @@
             app:layout_constraintEnd_toEndOf="@+id/button38"
             app:layout_constraintStart_toStartOf="@+id/button38"
             app:layout_constraintTop_toTopOf="parent"
-            android:background="@drawable/button_background"/>
+            android:background="@drawable/delete_background"/>
 
         <Button
             android:id="@+id/button25"
@@ -91,7 +94,7 @@
             android:textSize="30sp"
             app:layout_constraintStart_toEndOf="@+id/button27"
             app:layout_constraintTop_toBottomOf="@+id/button30"
-            android:background="@drawable/button_background"/>
+            android:background="@drawable/operators_background"/>
 
         <Button
             android:id="@+id/button27"
@@ -131,7 +134,7 @@
             android:textSize="30sp"
             app:layout_constraintStart_toEndOf="@+id/button31"
             app:layout_constraintTop_toBottomOf="@+id/button34"
-            android:background="@drawable/button_background"/>
+            android:background="@drawable/operators_background"/>
 
         <Button
             android:id="@+id/button31"
@@ -171,7 +174,7 @@
             android:textSize="30sp"
             app:layout_constraintStart_toEndOf="@+id/button35"
             app:layout_constraintTop_toBottomOf="@+id/button38"
-            android:background="@drawable/button_background"/>
+            android:background="@drawable/operators_background"/>
 
         <Button
             android:id="@+id/button35"
@@ -211,7 +214,7 @@
             android:textSize="30sp"
             app:layout_constraintStart_toEndOf="@+id/button39"
             app:layout_constraintTop_toBottomOf="@+id/button24"
-            android:background="@drawable/button_background"/>
+            android:background="@drawable/operators_background"/>
 
         <Button
             android:id="@+id/button39"
@@ -231,7 +234,7 @@
             android:textSize="30sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button24"
-            android:background="@drawable/button_background"/>
+            android:background="@drawable/clearbutton_background"/>
 
         <Button
             android:id="@+id/button21"
