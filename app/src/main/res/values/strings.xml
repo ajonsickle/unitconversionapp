@@ -28,20 +28,34 @@
     <string name="rightBracket">)</string>
     <string name="leftBracket">(</string>
     <string name="clearButton">C</string>
-    <string-array name="convertFromArray">
+    <string-array name="convertFromLengthArray">
         <item>Inches</item>
         <item>Miles</item>
-        <item>Metres (10^0)</item>
-        <item>Centimetres (10^-2)</item>
-        <item>Millimetres (10^-3)</item>
+        <item>Metres</item>
+        <item>Centimetres</item>
+        <item>Millimetres</item>
         <item>Feet</item>
         <item>Yards</item>
-        <item>Gigametres (10^9)</item>
-        <item>Megametres (10^6)</item>
-        <item>Kilometres (10^3)</item>
-        <item>Decimetres (10^-1)</item>
-        <item>Micrometres (10^-6)</item>
-        <item>Nanometres (10^-9)</item>
+        <item>Gigametres</item>
+        <item>Megametres</item>
+        <item>Kilometres</item>
+        <item>Decimetres</item>
+        <item>Micrometres</item>
+        <item>Nanometres</item>
+    </string-array>
+    <string-array name="convertFromAreaArray">
+        <item>Square Metres</item>
+        <item>Square Miles</item>
+        <item>Square Yards</item>
+        <item>Square Kilometres</item>
+        <item>Square Centimetres</item>
+        <item>Square Millimetres</item>
+        <item>Square Feet</item>
+        <item>Square Inches</item>
+        <item>Square Decimetres</item>
+        <item>Square Decametres</item>
+        <item>Acres</item>
+        <item>Hectares</item>
     </string-array>
 
 </resources>

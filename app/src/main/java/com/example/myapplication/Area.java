@@ -1,30 +1,38 @@
 package com.example.myapplication;
-
 import android.app.Activity;
-import android.content.Intent;
+
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
+import android.widget.Toast;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.ConstraintSet;
 
-import org.apache.commons.lang3.StringUtils;
+import java.util.ArrayList;
+import java.util.List;
+import org.mozilla.javascript.Context;
+import org.mozilla.javascript.Scriptable;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 
-import java.util.Objects;
-
-public class Length extends Activity {
+public class Area extends Activity {
     private Spinner convertFromSpinner;
     private TextInputEditText convertFromValueInput;
     private TextView resultTextView;
     private Spinner resultSpinner;
-    public double convertToMetres(Spinner a, TextInputEditText b) {
+    public double convertToSquareMetres(Spinner a, TextInputEditText b) {
         try {
             String input = b.getText().toString().trim();
             if (input.isEmpty()) {
@@ -32,44 +40,41 @@ public class Length extends Activity {
             }
             double d = 0;
             switch (a.getSelectedItem().toString()) {
-                case "Inches":
-                    d = (Double.parseDouble(input) / 39.37);
-                    break;
-                case "Metres":
+                case "Square Metres":
                     d = (Double.parseDouble(input));
                     break;
-                case "Centimetres":
+                case "Square Miles":
+                    d = (Double.parseDouble(input)) * 2.59e+6;
+                    break;
+                case "Square Yards":
+                    d = (Double.parseDouble(input) / 1.19);
+                    break;
+                case "Square Kilometres":
+                    d = (Double.parseDouble(input) * 1e+6);
+                    break;
+                case "Square Centimetres":
+                    d = (Double.parseDouble(input) / 10000);
+                    break;
+                case "Square Millimetres":
+                    d = (Double.parseDouble(input) / 1e+6);
+                    break;
+                case "Square Feet":
+                    d = (Double.parseDouble(input) / 10.764);
+                    break;
+                case "Square Inches":
+                    d = (Double.parseDouble(input) / 1550);
+                    break;
+                case "Square Decimetres":
                     d = (Double.parseDouble(input) / 100);
                     break;
-                case "Millimetres":
-                    d = (Double.parseDouble(input) / 1000);
+                case "Square Decametres":
+                    d = (Double.parseDouble(input) * 100);
                     break;
-                case "Feet":
-                    d = (Double.parseDouble(input) / 3.281);
+                case "Acres":
+                    d = (Double.parseDouble(input) * 4047);
                     break;
-                case "Yards":
-                    d = (Double.parseDouble(input) / 0.9144);
-                    break;
-                case "Gigametres":
-                    d = (Double.parseDouble(input) * 1000000000);
-                    break;
-                case "Megametres":
-                    d = (Double.parseDouble(input) * 1000000);
-                    break;
-                case "Kilometres":
-                    d = (Double.parseDouble(input) * 1000);
-                    break;
-                case "Decimetres":
-                    d = (Double.parseDouble(input) / 10);
-                    break;
-                case "Micrometres":
-                    d = (Double.parseDouble(input) / 1000000);
-                    break;
-                case "Nanometres":
-                    d = (Double.parseDouble(input) / 1000000000);
-                    break;
-                case "Miles":
-                    d = (Double.parseDouble(input) * 1609);
+                case "Hectares":
+                    d = (Double.parseDouble(input) * 10000);
                     break;
                 default:
                     d = 0;
@@ -81,48 +86,45 @@ public class Length extends Activity {
             return 0;
         }
     }
-    public double convertFromMetres(Spinner a, double b) {
+    public double convertFromSquareMetres(Spinner a, double b) {
         double d = 0;
         switch (a.getSelectedItem().toString()) {
 
-            case "Inches":
-                d = b * 39.37;
-                break;
-            case "Metres":
+            case "Square Metres":
                 d = b;
                 break;
-            case "Centimetres":
+            case "Square Miles":
+                d = b / 2.59e+6;
+                break;
+            case "Square Yards":
+                d = b * 1.19;
+                break;
+            case "Square Kilometres":
+                d = b / 1e+6;
+                break;
+            case "Square Centimetres":
+                d = b * 10000;
+                break;
+            case "Square Millimetres":
+                d = b * 1e+6;
+                break;
+            case "Square Feet":
+                d = b * 10.764;
+                break;
+            case "Square Inches":
+                d = b * 1550;
+                break;
+            case "Square Decimetres":
                 d = b * 100;
                 break;
-            case "Millimetres":
-                d = b * 1000;
+            case "Square Decametres":
+                d = b / 100;
                 break;
-            case "Feet":
-                d = b * 3.281;
+            case "Acres":
+                d = b / 4047;
                 break;
-            case "Yards":
-                d = b * 1.094;
-                break;
-            case "Gigametres":
-                d = b / 1000000000;
-                break;
-            case "Megametres":
-                d = b / 1000000;
-                break;
-            case "Kilometres":
-                d = b / 1000;
-                break;
-            case "Decimetres":
-                d = b * 10;
-                break;
-            case "Micrometres":
-                d = b * 1000000;
-                break;
-            case "Nanometres":
-                d = b * 1000000000;
-                break;
-            case "Miles":
-                d = b / 1609;
+            case "Hectares":
+                d = b / 10000;
                 break;
             default:
                 d = 0;
@@ -133,11 +135,11 @@ public class Length extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_length);
+        setContentView(R.layout.activity_area);
 
-        ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.convertFromLengthArray, android.R.layout.simple_spinner_item);
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.convertFromAreaArray, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        ArrayAdapter adapter1 = ArrayAdapter.createFromResource(this, R.array.convertFromLengthArray, android.R.layout.simple_spinner_item);
+        ArrayAdapter adapter1 = ArrayAdapter.createFromResource(this, R.array.convertFromAreaArray, android.R.layout.simple_spinner_item);
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         convertFromSpinner = (Spinner)findViewById(R.id.convertFromSpinner);
@@ -155,7 +157,7 @@ public class Length extends Activity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                resultTextView.setText(Double.toString(convertFromMetres(resultSpinner, convertToMetres(convertFromSpinner, convertFromValueInput))));
+                resultTextView.setText(Double.toString(convertFromSquareMetres(resultSpinner, convertToSquareMetres(convertFromSpinner, convertFromValueInput))));
 
             }
 
@@ -167,10 +169,10 @@ public class Length extends Activity {
         convertFromSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                double number = convertFromMetres(resultSpinner, convertToMetres(convertFromSpinner, convertFromValueInput));
+                double number = convertFromSquareMetres(resultSpinner, convertToSquareMetres(convertFromSpinner, convertFromValueInput));
                 number = Math.round(number * 100.0);
                 number = number/100.0;
-                resultTextView.setText(Double.toString(convertFromMetres(resultSpinner, convertToMetres(convertFromSpinner, convertFromValueInput))));
+                resultTextView.setText(Double.toString(convertFromSquareMetres(resultSpinner, convertToSquareMetres(convertFromSpinner, convertFromValueInput))));
             }
 
             @Override
@@ -181,7 +183,7 @@ public class Length extends Activity {
         resultSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                resultTextView.setText(Double.toString(convertFromMetres(resultSpinner, convertToMetres(convertFromSpinner, convertFromValueInput))));
+                resultTextView.setText(Double.toString(convertFromSquareMetres(resultSpinner, convertToSquareMetres(convertFromSpinner, convertFromValueInput))));
             }
 
             @Override
@@ -189,6 +191,5 @@ public class Length extends Activity {
 
             }
         });
-
     }
 }

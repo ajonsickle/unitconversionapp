@@ -27,6 +27,10 @@
             android:exported="true"
             android:label="@string/equations">
         </activity>
+        <activity android:name = ".Area">
+            android:exported="true"
+            android:label="Area">
+        </activity>
         <activity
             android:exported="true"
             android:name=".Length"

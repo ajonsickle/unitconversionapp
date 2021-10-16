@@ -8,9 +8,16 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableTop="@drawable/ic_action_name"
+        android:drawableTop="@drawable/ruler"
         android:text="@string/length"
         android:layout_marginLeft="5dp"
         android:id="@+id/lengthButton"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ic_action_name"
+        android:text="Area"
+        android:layout_marginLeft="95dp"
+        android:id="@+id/areaButton"/>
 
 </RelativeLayout>
