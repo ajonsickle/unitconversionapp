@@ -5,10 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import java.text.DecimalFormat;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import java.math.BigDecimal;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -30,46 +32,46 @@ public class Length extends Activity {
             if (input.isEmpty()) {
                 return 0;
             }
-            double d = 0;
+            double d = 0.0;
             switch (a.getSelectedItem().toString()) {
                 case "Inches":
-                    d = (Double.parseDouble(input) / 39.37);
+                    d = Double.parseDouble(input) / 39.37;
                     break;
                 case "Metres":
-                    d = (Double.parseDouble(input));
+                    d = Double.parseDouble(input);
                     break;
                 case "Centimetres":
-                    d = (Double.parseDouble(input) / 100);
+                    d = Double.parseDouble(input) / 100;
                     break;
                 case "Millimetres":
-                    d = (Double.parseDouble(input) / 1000);
+                    d = Double.parseDouble(input) / 1000;
                     break;
                 case "Feet":
-                    d = (Double.parseDouble(input) / 3.281);
+                    d = Double.parseDouble(input) / 3.281;
                     break;
                 case "Yards":
-                    d = (Double.parseDouble(input) / 0.9144);
+                    d = Double.parseDouble(input) / 0.9144;
                     break;
                 case "Gigametres":
-                    d = (Double.parseDouble(input) * 1000000000);
+                    d = Double.parseDouble(input) * 1000000000;
                     break;
                 case "Megametres":
-                    d = (Double.parseDouble(input) * 1000000);
+                    d = Double.parseDouble(input) * 1000000;
                     break;
                 case "Kilometres":
-                    d = (Double.parseDouble(input) * 1000);
+                    d = Double.parseDouble(input) * 1000;
                     break;
                 case "Decimetres":
-                    d = (Double.parseDouble(input) / 10);
+                    d = Double.parseDouble(input) * 10;
                     break;
                 case "Micrometres":
-                    d = (Double.parseDouble(input) / 1000000);
+                    d = Double.parseDouble(input) / 1000000;
                     break;
                 case "Nanometres":
-                    d = (Double.parseDouble(input) / 1000000000);
+                    d = Double.parseDouble(input) / 1000000000;
                     break;
                 case "Miles":
-                    d = (Double.parseDouble(input) * 1609);
+                    d = Double.parseDouble(input) * 1609;
                     break;
                 default:
                     d = 0;
@@ -82,7 +84,7 @@ public class Length extends Activity {
         }
     }
     public double convertFromMetres(Spinner a, double b) {
-        double d = 0;
+        double d = 0.0;
         switch (a.getSelectedItem().toString()) {
 
             case "Inches":

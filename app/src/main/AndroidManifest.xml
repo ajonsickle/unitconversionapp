@@ -43,6 +43,11 @@
             android:label="@string/calculator">
 
         </activity>
+        <activity
+            android:exported="true"
+            android:name=".Birthday"
+            android:label="Birthday">
+        </activity>
     </application>
 
 </manifest>

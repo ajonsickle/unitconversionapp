@@ -10,13 +10,17 @@
 
     <TextView
         android:id="@+id/previousEquation"
-        android:layout_width="59dp"
-        android:layout_height="22dp"
+        android:layout_width="355dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="16dp"
         android:text=" "
+        android:scrollHorizontally="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:ellipsize="marquee"
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.828" />
+        app:layout_constraintVertical_bias="0.829" />
 
     <TextView
         android:id="@+id/editTextTextPersonName"
@@ -25,14 +29,16 @@
         android:ems="10"
         android:layout_marginBottom="10dp"
         android:text=" "
-        android:gravity="right|center"
+        android:gravity="left|center"
+        android:scrollHorizontally="true"
         android:textSize="30sp"
         android:textStyle="bold"
+        android:singleLine="true"
         android:background="@drawable/textview_border"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/constraintLayout"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@id/constraintLayout" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"

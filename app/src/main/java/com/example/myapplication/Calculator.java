@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -10,6 +11,7 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 import android.widget.Toast;
+import android.text.method.BaseMovementMethod;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
 
@@ -36,6 +38,8 @@ public class Calculator extends Activity {
         setContentView(R.layout.activity_calculator);
         previousEquation = findViewById(R.id.previousEquation);
         editTextTextPersonName = findViewById(R.id.editTextTextPersonName);
+        editTextTextPersonName.setMovementMethod(new ScrollingMovementMethod());
+        editTextTextPersonName.setHorizontallyScrolling(true);
         equalsButton = findViewById(R.id.equalsButton);
         decimalButton = findViewById(R.id.decimalButton);
         button21 = findViewById(R.id.button21);
@@ -61,18 +65,20 @@ public class Calculator extends Activity {
         equalsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (inputString.charAt(inputString.length() - 1) != '(' && inputString.charAt(inputString.length() - 1) != '.' && inputString.charAt(inputString.length() - 1) != '*' && inputString.charAt(inputString.length() - 1) != '/' && inputString.charAt(inputString.length() - 1) != '-' && inputString.charAt(inputString.length() - 1) != '+') {
-                    decimalClicked = false;
-                    double result = 0;
-                    ScriptEngine engine = new ScriptEngineManager().getEngineByName("rhino");
-                    try {
-                        result = (double)engine.eval(inputString);
-                    } catch (ScriptException e) {
-                        Toast.makeText(Calculator.this, "Exception has occurred", Toast.LENGTH_SHORT).show();
+                if (inputString.length() != 0) {
+                    if (inputString.charAt(inputString.length() - 1) != '(' && inputString.charAt(inputString.length() - 1) != '.' && inputString.charAt(inputString.length() - 1) != '*' && inputString.charAt(inputString.length() - 1) != '/' && inputString.charAt(inputString.length() - 1) != '-' && inputString.charAt(inputString.length() - 1) != '+') {
+                        decimalClicked = false;
+                        double result = 0;
+                        ScriptEngine engine = new ScriptEngineManager().getEngineByName("rhino");
+                        try {
+                            result = (double) engine.eval(inputString);
+                        } catch (ScriptException e) {
+                            Toast.makeText(Calculator.this, "Exception has occurred", Toast.LENGTH_SHORT).show();
+                        }
+                        previousEquation.setText(String.valueOf(result));
+                        inputString = "";
+                        editTextTextPersonName.setText(inputString);
                     }
-                    previousEquation.setText(String.valueOf(result));
-                    inputString = "";
-                    editTextTextPersonName.setText(inputString);
                 }
             }
         });

@@ -19,5 +19,12 @@
         android:text="Area"
         android:layout_marginLeft="95dp"
         android:id="@+id/areaButton"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/birthday_cake"
+        android:text="Birthday"
+        android:layout_marginLeft="185dp"
+        android:id="@+id/birthdayButton"/>
 
 </RelativeLayout>
