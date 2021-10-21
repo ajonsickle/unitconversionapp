@@ -4,40 +4,16 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import java.util.concurrent.TimeUnit;
-import android.content.Intent;
-import android.os.Build;
+
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import java.text.DecimalFormat;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.EditText;
-import java.math.BigDecimal;
-import android.widget.Spinner;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
-
-import org.apache.commons.lang3.StringUtils;
-import org.w3c.dom.Text;
-
-import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
-
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
 import java.util.Calendar;
-import java.util.Date;
-import java.util.Objects;
 
-public class Birthday extends Activity {
+public class Dates extends Activity {
 
     long milliseconds = 0;
     long milliseconds1 = 0;
@@ -56,7 +32,7 @@ public class Birthday extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_birthday);
+        setContentView(R.layout.activity_dates);
         startingDateText = findViewById(R.id.startingDateText);
         endingDateText = findViewById(R.id.endingDateText);
         startingDate = findViewById(R.id.startingDate);
@@ -100,12 +76,17 @@ public class Birthday extends Activity {
                 Calendar calendar = Calendar.getInstance();
                 calendar.set(i, i1, i2);
                 milliseconds = calendar.getTimeInMillis();
-                long minutesPassed = TimeUnit.MILLISECONDS.toMinutes(milliseconds - milliseconds1);
-                years.setText("Years:" + "\n" + String.valueOf(Math.round((milliseconds - milliseconds1) / 3.154e+10)));
-                months.setText("Months:" + "\n" + String.valueOf(Math.round((milliseconds - milliseconds1) / 2.628e+9)));
-                weeks.setText("Weeks:" + "\n" + String.valueOf(Math.round((milliseconds - milliseconds1) / 6.048e+8)));
-                hours.setText("Hours:" + "\n" + String.valueOf(Math.round((milliseconds - milliseconds1) / 3.6e+6)));
-                days.setText("Days:" + "\n" + String.valueOf(Math.round((milliseconds - milliseconds1) / 8.64e+7)));
+                long daysPassed = TimeUnit.MILLISECONDS.toDays(milliseconds - milliseconds1) + 1;
+                long yearsPassed = daysPassed / 365;
+                long monthsPassed = (long) (daysPassed / 30.436875);
+                long weeksPassed = daysPassed / 7;
+                long hoursPassed = TimeUnit.MILLISECONDS.toHours(milliseconds - milliseconds1) + 1;
+                long minutesPassed = hoursPassed * 60;
+                years.setText("Years:" + "\n" + String.valueOf(yearsPassed));
+                months.setText("Months:" + "\n" + String.valueOf(monthsPassed));
+                weeks.setText("Weeks:" + "\n" + String.valueOf(weeksPassed));
+                hours.setText("Hours:" + "\n" + String.valueOf(hoursPassed));
+                days.setText("Days:" + "\n" + String.valueOf(daysPassed));
                 minutes.setText("Minutes:" + "\n" + String.valueOf(minutesPassed));
 
             }
@@ -128,12 +109,17 @@ public class Birthday extends Activity {
                 Calendar calendar = Calendar.getInstance();
                 calendar.set(i, i1, i2);
                 milliseconds1 = calendar.getTimeInMillis();
-                long minutesPassed = TimeUnit.MILLISECONDS.toMinutes(milliseconds - milliseconds1);
-                years.setText("Years:" + "\n" + String.valueOf(Math.round((milliseconds - milliseconds1) / 3.154e+10)));
-                months.setText("Months:" + "\n" + String.valueOf(Math.round((milliseconds - milliseconds1) / 2.628e+9)));
-                weeks.setText("Weeks:" + "\n" + String.valueOf(Math.round((milliseconds - milliseconds1) / 6.048e+8)));
-                hours.setText("Hours:" + "\n" + String.valueOf(Math.round((milliseconds - milliseconds1) / 3.6e+6)));
-                days.setText("Days:" + "\n" + String.valueOf(Math.round((milliseconds - milliseconds1) / 8.64e+7)));
+                long daysPassed = TimeUnit.MILLISECONDS.toDays(milliseconds - milliseconds1) + 1;
+                long yearsPassed = daysPassed / 365;
+                long monthsPassed = (long) (daysPassed / 30.436875);
+                long weeksPassed = daysPassed / 7;
+                long hoursPassed = TimeUnit.MILLISECONDS.toHours(milliseconds - milliseconds1) + 1;
+                long minutesPassed = hoursPassed * 60;
+                years.setText("Years:" + "\n" + String.valueOf(yearsPassed));
+                months.setText("Months:" + "\n" + String.valueOf(monthsPassed));
+                weeks.setText("Weeks:" + "\n" + String.valueOf(weeksPassed));
+                hours.setText("Hours:" + "\n" + String.valueOf(hoursPassed));
+                days.setText("Days:" + "\n" + String.valueOf(daysPassed));
                 minutes.setText("Minutes:" + "\n" + String.valueOf(minutesPassed));
             }
         };

@@ -45,8 +45,8 @@
         </activity>
         <activity
             android:exported="true"
-            android:name=".Birthday"
-            android:label="Birthday">
+            android:name=".Dates"
+            android:label="Dates">
         </activity>
     </application>
 

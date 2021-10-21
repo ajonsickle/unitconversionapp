@@ -22,9 +22,9 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableTop="@drawable/birthday_cake"
-        android:text="Birthday"
+        android:drawableTop="@drawable/calendar"
+        android:text="Dates"
         android:layout_marginLeft="185dp"
-        android:id="@+id/birthdayButton"/>
+        android:id="@+id/datesButton"/>
 
 </RelativeLayout>
