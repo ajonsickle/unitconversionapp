@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Length"
+    android:theme="@style/Theme.MaterialComponents.DayNight">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter Weight"
+        android:id="@+id/weightInput"
+        android:background="@drawable/weight_background"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:width="131dp"
+        android:inputType="numberDecimal"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter Height"
+        android:id="@+id/heightInput"
+        android:background="@drawable/weight_background"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="150dp"
+        android:width="130dp"
+        android:inputType="numberDecimal"/>
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:layout_marginLeft="250dp"
+        android:id="@+id/weightSpinner"/>
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="165dp"
+        android:layout_marginLeft="250dp"
+        android:id="@+id/heightSpinner" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400dp"
+        android:id="@+id/bmiTextView"
+        android:text="BMI: "/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="450dp"
+        android:id="@+id/bmiCategory"/>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="575dp"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:minWidth="250dp"
+        android:maxWidth="250dp"
+        android:minHeight="10dp"
+        android:maxHeight="10dp"
+        android:progressDrawable="@drawable/bmiprogressbar"
+        android:id="@+id/bmiprogressbar"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="550dp"
+        android:layout_marginLeft="70dp"
+        android:text="0\n|"
+        android:id="@+id/bmi0"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="550dp"
+        android:layout_marginLeft="105dp"
+        android:text="18.5\n    |"
+        android:id="@+id/bmi18.5"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="550dp"
+        android:layout_marginLeft="155dp"
+        android:text="  25\n    |"
+        android:id="@+id/bmi25"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="550dp"
+        android:layout_marginLeft="205dp"
+        android:text="  30\n    |"
+        android:id="@+id/bmi30"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="550dp"
+        android:layout_marginLeft="255dp"
+        android:text="  40+\n    |"
+        android:id="@+id/bmi40"/>
+
+    <TextView
+        android:id="@+id/bmi0to18.5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="590dp"
+        android:text="Underweight"
+        android:textSize="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="590dp"
+        android:layout_marginLeft="133dp"
+        android:text="Healthy"
+        android:textSize="8dp"
+        android:id="@+id/bmi18.5to25"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="590dp"
+        android:layout_marginLeft="175dp"
+        android:text="Overweight"
+        android:textSize="8dp"
+        android:id="@+id/bmi25to30"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="590dp"
+        android:layout_marginLeft="235dp"
+        android:text="Obese"
+        android:textSize="8dp"
+        android:id="@+id/bmi30to40"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="590dp"
+        android:layout_marginLeft="273dp"
+        android:text="Severely Obese"
+        android:textSize="8dp"
+        android:id="@+id/bmi40plus"/>
+
+
+</RelativeLayout>

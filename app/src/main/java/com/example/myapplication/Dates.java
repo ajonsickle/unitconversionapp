@@ -79,6 +79,9 @@ public class Dates extends Activity {
                 long daysPassed = TimeUnit.MILLISECONDS.toDays(milliseconds - milliseconds1) + 1;
                 long yearsPassed = daysPassed / 365;
                 long monthsPassed = (long) (daysPassed / 30.436875);
+                if (daysPassed == 365 && monthsPassed == 11) {
+                    monthsPassed = 12;
+                }
                 long weeksPassed = daysPassed / 7;
                 long hoursPassed = TimeUnit.MILLISECONDS.toHours(milliseconds - milliseconds1) + 1;
                 long minutesPassed = hoursPassed * 60;
@@ -112,6 +115,9 @@ public class Dates extends Activity {
                 long daysPassed = TimeUnit.MILLISECONDS.toDays(milliseconds - milliseconds1) + 1;
                 long yearsPassed = daysPassed / 365;
                 long monthsPassed = (long) (daysPassed / 30.436875);
+                if (daysPassed == 365 && monthsPassed == 11) {
+                    monthsPassed = 12;
+                }
                 long weeksPassed = daysPassed / 7;
                 long hoursPassed = TimeUnit.MILLISECONDS.toHours(milliseconds - milliseconds1) + 1;
                 long minutesPassed = hoursPassed * 60;

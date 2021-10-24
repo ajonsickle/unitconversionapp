@@ -57,5 +57,13 @@
         <item>Acres</item>
         <item>Hectares</item>
     </string-array>
+    <string-array name="weightArray">
+        <item>Kilograms</item>
+        <item>Pounds</item>
+    </string-array>
+    <string-array name="heightArray">
+        <item>Centimetres</item>
+        <item>Inches</item>
+    </string-array>
 
 </resources>
