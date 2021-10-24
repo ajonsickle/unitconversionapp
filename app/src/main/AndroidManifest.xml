@@ -53,6 +53,11 @@
             android:label="BMI">
 
         </activity>
+        <activity android:name=".Base"
+            android:exported="true"
+            android:label="Base">
+
+        </activity>
     </application>
 
 </manifest>

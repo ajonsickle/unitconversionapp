@@ -16,22 +16,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableTop="@drawable/ic_action_name"
-        android:text="Area"
+        android:text="@string/area"
         android:layout_marginLeft="105dp"
         android:id="@+id/areaButton"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableTop="@drawable/calendar"
-        android:text="Dates"
+        android:text="@string/dates"
         android:layout_marginLeft="195dp"
         android:id="@+id/datesButton"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableTop="@drawable/scale"
-        android:text="BMI"
+        android:text="@string/bmi"
         android:layout_marginLeft="285dp"
         android:id="@+id/bmiButton"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/base"
+        android:layout_marginTop="75dp"
+        android:text="@string/base"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/baseNButton"/>
 
 </RelativeLayout>

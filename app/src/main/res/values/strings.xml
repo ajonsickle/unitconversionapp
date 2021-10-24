@@ -28,6 +28,10 @@
     <string name="rightBracket">)</string>
     <string name="leftBracket">(</string>
     <string name="clearButton">C</string>
+    <string name="bmi">BMI</string>
+    <string name="dates">Dates</string>
+    <string name="area">Area</string>
+    <string name="base">Base</string>
     <string-array name="convertFromLengthArray">
         <item>Inches</item>
         <item>Miles</item>
@@ -64,6 +68,12 @@
     <string-array name="heightArray">
         <item>Centimetres</item>
         <item>Inches</item>
+    </string-array>
+    <string-array name="baseArray">
+        <item>Binary</item>
+        <item>Hex</item>
+        <item>Octal</item>
+        <item>Decimal</item>
     </string-array>
 
 </resources>

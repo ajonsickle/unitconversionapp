@@ -86,7 +86,6 @@ public class Length extends Activity {
     public double convertFromMetres(Spinner a, double b) {
         double d = 0.0;
         switch (a.getSelectedItem().toString()) {
-
             case "Inches":
                 d = b * 39.37;
                 break;

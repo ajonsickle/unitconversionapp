@@ -12,6 +12,7 @@ public class UnitConversion extends Activity {
     private Button areaButton;
     private Button birthdayButton;
     private Button bmiButton;
+    private Button baseButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,7 @@ public class UnitConversion extends Activity {
         areaButton = findViewById(R.id.areaButton);
         birthdayButton = findViewById(R.id.datesButton);
         bmiButton = findViewById(R.id.bmiButton);
+        baseButton = findViewById(R.id.baseNButton);
 
         lengthButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,6 +49,13 @@ public class UnitConversion extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(UnitConversion.this, BMI.class);
+                startActivity(intent);
+            }
+        });
+        baseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(UnitConversion.this, Base.class);
                 startActivity(intent);
             }
         });
