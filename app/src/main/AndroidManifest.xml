@@ -58,6 +58,10 @@
             android:label="Base">
 
         </activity>
+        <activity android:name=".Temp"
+            android:exported="true"
+            android:label="Temp">
+        </activity>
     </application>
 
 </manifest>

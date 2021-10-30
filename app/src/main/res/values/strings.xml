@@ -75,5 +75,10 @@
         <item>Octal</item>
         <item>Decimal</item>
     </string-array>
+    <string-array name="tempArray">
+        <item>Celsius</item>
+        <item>Fahrenheit</item>
+        <item>Kelvin</item>
+    </string-array>
 
 </resources>
