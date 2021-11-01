@@ -80,5 +80,30 @@
         <item>Fahrenheit</item>
         <item>Kelvin</item>
     </string-array>
+    <string-array name="timeArray">
+        <item>Milliseconds</item>
+        <item>Seconds</item>
+        <item>Minutes</item>
+        <item>Hours</item>
+        <item>Days</item>
+        <item>Weeks</item>
+        <item>Months</item>
+        <item>Years</item>
+    </string-array>
+    <string-array name="dataArray">
+        <item>Bits</item>
+        <item>Nibbles</item>
+        <item>Bytes</item>
+        <item>Kilobytes</item>
+        <item>Kibibytes</item>
+        <item>Megabytes</item>
+        <item>Mebibytes</item>
+        <item>Gigabytes</item>
+        <item>Gibibytes</item>
+        <item>Terabytes</item>
+        <item>Tebibytes</item>
+        <item>Petabytes</item>
+        <item>Pebibytes</item>
+    </string-array>
 
 </resources>

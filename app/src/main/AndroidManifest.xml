@@ -62,6 +62,15 @@
             android:exported="true"
             android:label="Temp">
         </activity>
+        <activity android:name=".Time"
+            android:exported="true"
+            android:label="Time">
+        </activity>
+        <activity android:name=".Data"
+            android:exported="true"
+            android:label="Data">
+
+        </activity>
     </application>
 
 </manifest>

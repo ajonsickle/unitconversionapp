@@ -25,7 +25,8 @@
         android:drawableTop="@drawable/calendar"
         android:text="@string/dates"
         android:layout_marginLeft="195dp"
-        android:id="@+id/datesButton"/>    <Button
+        android:id="@+id/datesButton"/>
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableTop="@drawable/scale"
@@ -48,5 +49,21 @@
         android:text="Temp"
         android:layout_marginLeft="105dp"
         android:id="@+id/tempButton"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/clock"
+        android:layout_marginTop="75dp"
+        android:text="Time"
+        android:layout_marginLeft="195dp"
+        android:id="@+id/timeButton"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/data"
+        android:layout_marginTop="75dp"
+        android:text="Data"
+        android:layout_marginLeft="285dp"
+        android:id="@+id/dataButton"/>
 
 </RelativeLayout>
