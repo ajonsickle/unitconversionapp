@@ -105,5 +105,13 @@
         <item>Petabytes</item>
         <item>Pebibytes</item>
     </string-array>
+    <string-array name="speedArray">
+        <item>m/s</item>
+        <item>km/h</item>
+        <item>mph</item>
+        <item>Knots</item>
+        <item>fps</item>
+        <item>Mach number</item>
+    </string-array>
 
 </resources>

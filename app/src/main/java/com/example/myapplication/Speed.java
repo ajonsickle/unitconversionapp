@@ -14,8 +14,6 @@ import java.math.BigDecimal;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
-
 import org.apache.commons.lang3.StringUtils;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -23,15 +21,13 @@ import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.Objects;
 
+public class Speed extends Activity{
 
-
-public class Time extends Activity {
     private Spinner convertFromSpinner;
     private TextInputEditText convertFromValueInput;
     private TextView resultTextView;
     private Spinner resultSpinner;
-
-    public double convertToDays(Spinner a, TextInputEditText b) {
+    public double convertToMetresPerSecond(Spinner a, TextInputEditText b) {
         try {
             String input = b.getText().toString().trim();
             if (input.isEmpty()) {
@@ -39,29 +35,23 @@ public class Time extends Activity {
             }
             double d = 0.0;
             switch (a.getSelectedItem().toString()) {
-                case "Milliseconds":
-                    d = Double.parseDouble(input) / (8.64e+7);
-                    break;
-                case "Seconds":
-                    d = Double.parseDouble(input) / 86400;
-                    break;
-                case "Minutes":
-                    d = Double.parseDouble(input) / 1440;
-                    break;
-                case "Hours":
-                    d = Double.parseDouble(input) / 24;
-                    break;
-                case "Days":
+                case "m/s":
                     d = Double.parseDouble(input);
                     break;
-                case "Weeks":
-                    d = Double.parseDouble(input) * 7;
+                case "km/h":
+                    d = Double.parseDouble(input) / 3.6;
                     break;
-                case "Months":
-                    d = Double.parseDouble(input) * 30.4167;
+                case "mph":
+                    d = Double.parseDouble(input) / 2.237;
                     break;
-                case "Years":
-                    d = Double.parseDouble(input) * 365;
+                case "Knots":
+                    d = Double.parseDouble(input) / 1.944;
+                    break;
+                case "fps":
+                    d = Double.parseDouble(input) / 3.281;
+                    break;
+                case "Mach number":
+                    d = Double.parseDouble(input) * 340.29;
                     break;
                 default:
                     d = 0;
@@ -73,32 +63,26 @@ public class Time extends Activity {
             return 0;
         }
     }
-    public double convertFromDays(Spinner a, double b) {
+    public double convertFromMetresPerSecond(Spinner a, double b) {
         double d = 0.0;
         switch (a.getSelectedItem().toString()) {
-            case "Milliseconds":
-                d = b * (8.64e+7);
-                break;
-            case "Seconds":
-                d = b * 86400;
-                break;
-            case "Minutes":
-                d = b * 1440;
-                break;
-            case "Hours":
-                d = b * 24;
-                break;
-            case "Days":
+            case "m/s":
                 d = b;
                 break;
-            case "Weeks":
-                d = b / 7;
+            case "km/h":
+                d = b * 3.6;
                 break;
-            case "Months":
-                d = b / 30.4167;
+            case "mph":
+                d = b * 2.237;
                 break;
-            case "Years":
-                d = b / 365;
+            case "Knots":
+                d = b * 1.944;
+                break;
+            case "fps":
+                d = b * 3.281;
+                break;
+            case "Mach number":
+                d = b / 340.29;
                 break;
             default:
                 d = 0;
@@ -106,26 +90,23 @@ public class Time extends Activity {
         }
         return d;
     }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_time);
+        setContentView(R.layout.activity_speed);
 
-        ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.timeArray, android.R.layout.simple_spinner_item);
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.speedArray, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        ArrayAdapter adapter1 = ArrayAdapter.createFromResource(this, R.array.timeArray, android.R.layout.simple_spinner_item);
+        ArrayAdapter adapter1 = ArrayAdapter.createFromResource(this, R.array.speedArray, android.R.layout.simple_spinner_item);
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        convertFromSpinner = (Spinner)findViewById(R.id.convertFromSpinner);
+        convertFromSpinner = (Spinner) findViewById(R.id.convertFromSpinner);
         convertFromSpinner.setAdapter(adapter);
-        resultSpinner = (Spinner)findViewById(R.id.resultSpinner);
+        resultSpinner = (Spinner) findViewById(R.id.resultSpinner);
         resultSpinner.setAdapter(adapter1);
         resultTextView = findViewById(R.id.resultTextView);
         convertFromValueInput = findViewById(R.id.enterConvertFromValueEditText);
-
-        DecimalFormat twoDP = new DecimalFormat("#.##");
-
+        DecimalFormat format = new DecimalFormat("#.####");
         convertFromValueInput.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -134,7 +115,7 @@ public class Time extends Activity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                resultTextView.setText(twoDP.format(convertFromDays(resultSpinner, convertToDays(convertFromSpinner, convertFromValueInput))));
+                resultTextView.setText(format.format(convertFromMetresPerSecond(resultSpinner, convertToMetresPerSecond(convertFromSpinner, convertFromValueInput))));
 
             }
 
@@ -146,7 +127,7 @@ public class Time extends Activity {
         convertFromSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                resultTextView.setText(twoDP.format(convertFromDays(resultSpinner, convertToDays(convertFromSpinner, convertFromValueInput))));
+                resultTextView.setText(format.format(convertFromMetresPerSecond(resultSpinner, convertToMetresPerSecond(convertFromSpinner, convertFromValueInput))));
             }
 
             @Override
@@ -157,7 +138,7 @@ public class Time extends Activity {
         resultSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                resultTextView.setText(twoDP.format(convertFromDays(resultSpinner, convertToDays(convertFromSpinner, convertFromValueInput))));
+                resultTextView.setText(format.format(convertFromMetresPerSecond(resultSpinner, convertToMetresPerSecond(convertFromSpinner, convertFromValueInput))));
             }
 
             @Override
@@ -166,4 +147,5 @@ public class Time extends Activity {
             }
         });
     }
+
 }

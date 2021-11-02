@@ -18,6 +18,7 @@ import android.widget.Toast;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import org.mozilla.javascript.Context;
@@ -47,7 +48,7 @@ public class Area extends Activity {
                     d = (Double.parseDouble(input)) * 2.59e+6;
                     break;
                 case "Square Yards":
-                    d = (Double.parseDouble(input) / 1.19);
+                    d = (Double.parseDouble(input) / 1.196);
                     break;
                 case "Square Kilometres":
                     d = (Double.parseDouble(input) * 1e+6);
@@ -97,7 +98,7 @@ public class Area extends Activity {
                 d = b / 2.59e+6;
                 break;
             case "Square Yards":
-                d = b * 1.19;
+                d = b * 1.196;
                 break;
             case "Square Kilometres":
                 d = b / 1e+6;
@@ -148,7 +149,7 @@ public class Area extends Activity {
         resultSpinner.setAdapter(adapter1);
         resultTextView = findViewById(R.id.resultTextView);
         convertFromValueInput = findViewById(R.id.enterConvertFromValueEditText);
-
+        DecimalFormat format = new DecimalFormat("#.######");
         convertFromValueInput.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -157,7 +158,7 @@ public class Area extends Activity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                resultTextView.setText(Double.toString(convertFromSquareMetres(resultSpinner, convertToSquareMetres(convertFromSpinner, convertFromValueInput))));
+                resultTextView.setText(format.format(convertFromSquareMetres(resultSpinner, convertToSquareMetres(convertFromSpinner, convertFromValueInput))));
 
             }
 
@@ -169,10 +170,7 @@ public class Area extends Activity {
         convertFromSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                double number = convertFromSquareMetres(resultSpinner, convertToSquareMetres(convertFromSpinner, convertFromValueInput));
-                number = Math.round(number * 100.0);
-                number = number/100.0;
-                resultTextView.setText(Double.toString(convertFromSquareMetres(resultSpinner, convertToSquareMetres(convertFromSpinner, convertFromValueInput))));
+                resultTextView.setText(format.format(convertFromSquareMetres(resultSpinner, convertToSquareMetres(convertFromSpinner, convertFromValueInput))));
             }
 
             @Override
@@ -183,7 +181,7 @@ public class Area extends Activity {
         resultSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                resultTextView.setText(Double.toString(convertFromSquareMetres(resultSpinner, convertToSquareMetres(convertFromSpinner, convertFromValueInput))));
+                resultTextView.setText(format.format(convertFromSquareMetres(resultSpinner, convertToSquareMetres(convertFromSpinner, convertFromValueInput))));
             }
 
             @Override

@@ -71,6 +71,16 @@
             android:label="Data">
 
         </activity>
+        <activity android:name=".Money"
+            android:exported="true"
+            android:label="Money">
+
+        </activity>
+        <activity android:name=".Speed"
+            android:exported="true"
+            android:label="Speed">
+
+        </activity>
     </application>
 
 </manifest>

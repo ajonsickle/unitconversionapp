@@ -50,7 +50,7 @@ public class Length extends Activity {
                     d = Double.parseDouble(input) / 3.281;
                     break;
                 case "Yards":
-                    d = Double.parseDouble(input) / 0.9144;
+                    d = Double.parseDouble(input) * 0.9144;
                     break;
                 case "Gigametres":
                     d = Double.parseDouble(input) * 1000000000;
@@ -102,7 +102,7 @@ public class Length extends Activity {
                 d = b * 3.281;
                 break;
             case "Yards":
-                d = b * 1.094;
+                d = b / 0.9144;
                 break;
             case "Gigametres":
                 d = b / 1000000000;
@@ -147,7 +147,7 @@ public class Length extends Activity {
         resultSpinner.setAdapter(adapter1);
         resultTextView = findViewById(R.id.resultTextView);
         convertFromValueInput = findViewById(R.id.enterConvertFromValueEditText);
-
+        DecimalFormat format = new DecimalFormat("#.####");
         convertFromValueInput.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -156,7 +156,7 @@ public class Length extends Activity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                resultTextView.setText(Double.toString(convertFromMetres(resultSpinner, convertToMetres(convertFromSpinner, convertFromValueInput))));
+                resultTextView.setText(format.format(convertFromMetres(resultSpinner, convertToMetres(convertFromSpinner, convertFromValueInput))));
 
             }
 
@@ -168,10 +168,7 @@ public class Length extends Activity {
         convertFromSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                double number = convertFromMetres(resultSpinner, convertToMetres(convertFromSpinner, convertFromValueInput));
-                number = Math.round(number * 100.0);
-                number = number/100.0;
-                resultTextView.setText(Double.toString(convertFromMetres(resultSpinner, convertToMetres(convertFromSpinner, convertFromValueInput))));
+                resultTextView.setText(format.format(convertFromMetres(resultSpinner, convertToMetres(convertFromSpinner, convertFromValueInput))));
             }
 
             @Override
@@ -182,7 +179,7 @@ public class Length extends Activity {
         resultSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                resultTextView.setText(Double.toString(convertFromMetres(resultSpinner, convertToMetres(convertFromSpinner, convertFromValueInput))));
+                resultTextView.setText(format.format(convertFromMetres(resultSpinner, convertToMetres(convertFromSpinner, convertFromValueInput))));
             }
 
             @Override

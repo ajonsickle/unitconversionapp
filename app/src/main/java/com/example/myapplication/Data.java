@@ -150,7 +150,7 @@ public class Data extends Activity {
         resultSpinner.setAdapter(adapter1);
         resultTextView = findViewById(R.id.resultTextView);
         convertFromValueInput = findViewById(R.id.enterConvertFromValueEditText);
-
+        DecimalFormat format = new DecimalFormat("#.#######################");
         convertFromValueInput.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -159,7 +159,7 @@ public class Data extends Activity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                resultTextView.setText(Double.toString(convertFromBytes(resultSpinner, convertToBytes(convertFromSpinner, convertFromValueInput))));
+                resultTextView.setText(format.format(convertFromBytes(resultSpinner, convertToBytes(convertFromSpinner, convertFromValueInput))));
 
             }
 
@@ -171,10 +171,7 @@ public class Data extends Activity {
         convertFromSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                double number = convertFromBytes(resultSpinner, convertToBytes(convertFromSpinner, convertFromValueInput));
-                number = Math.round(number * 100.0);
-                number = number/100.0;
-                resultTextView.setText(Double.toString(convertFromBytes(resultSpinner, convertToBytes(convertFromSpinner, convertFromValueInput))));
+                resultTextView.setText(format.format(convertFromBytes(resultSpinner, convertToBytes(convertFromSpinner, convertFromValueInput))));
             }
 
             @Override
@@ -185,7 +182,7 @@ public class Data extends Activity {
         resultSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                resultTextView.setText(Double.toString(convertFromBytes(resultSpinner, convertToBytes(convertFromSpinner, convertFromValueInput))));
+                resultTextView.setText(format.format(convertFromBytes(resultSpinner, convertToBytes(convertFromSpinner, convertFromValueInput))));
             }
 
             @Override

@@ -120,9 +120,6 @@ public class Temp extends Activity{
         convertFromSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                double number = convertFromCelsius(resultSpinner, convertToCelsius(convertFromSpinner, convertFromValueInput));
-                number = Math.round(number * 100.0);
-                number = number/100.0;
                 resultTextView.setText(Double.toString(convertFromCelsius(resultSpinner, convertToCelsius(convertFromSpinner, convertFromValueInput))));
             }
 

@@ -66,4 +66,21 @@
         android:layout_marginLeft="285dp"
         android:id="@+id/dataButton"/>
 
+    <Button
+        android:id="@+id/moneyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="150dp"
+        android:drawableTop="@drawable/dollar"
+        android:text="money" />
+    <Button
+        android:id="@+id/speedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="150dp"
+        android:drawableTop="@drawable/speed"
+        android:text="Speed" />
+
 </RelativeLayout>
