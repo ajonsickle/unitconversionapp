@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class UnitConversion extends Activity {
 
-    private Button lengthButton, areaButton, birthdayButton, bmiButton, baseButton, tempButton, timeButton, dataButton, moneyButton, speedButton;
+    private Button lengthButton, areaButton, birthdayButton, bmiButton, baseButton, tempButton, timeButton, dataButton, moneyButton, speedButton, volumeButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,7 @@ public class UnitConversion extends Activity {
         dataButton = findViewById(R.id.dataButton);
         moneyButton = findViewById(R.id.moneyButton);
         speedButton = findViewById(R.id.speedButton);
+        volumeButton = findViewById(R.id.volumeButton);
 
         lengthButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,6 +93,13 @@ public class UnitConversion extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(UnitConversion.this, Speed.class);
+                startActivity(intent);
+            }
+        });
+        volumeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(UnitConversion.this, Volume.class);
                 startActivity(intent);
             }
         });

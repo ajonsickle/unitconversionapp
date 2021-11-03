@@ -136,7 +136,7 @@ public class Area extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_area);
+        setContentView(R.layout.activity_generic);
 
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.convertFromAreaArray, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

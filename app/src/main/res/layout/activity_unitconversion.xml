@@ -82,5 +82,13 @@
         android:layout_marginTop="150dp"
         android:drawableTop="@drawable/speed"
         android:text="Speed" />
+    <Button
+        android:id="@+id/volumeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="195dp"
+        android:layout_marginTop="150dp"
+        android:drawableTop="@drawable/volume"
+        android:text="Volume" />
 
 </RelativeLayout>

@@ -113,5 +113,24 @@
         <item>fps</item>
         <item>Mach number</item>
     </string-array>
+    <string-array name="volumeArray">
+        <item>Cubic Metres</item>
+        <item>Cubic Miles</item>
+        <item>Cubic Yards</item>
+        <item>Cubic Kilometres</item>
+        <item>Cubic Centimetres</item>
+        <item>Cubic Millimetres</item>
+        <item>Cubic Feet</item>
+        <item>Cubic Inches</item>
+        <item>Acre-feet</item>
+        <item>Millilitres</item>
+        <item>Centilitres</item>
+        <item>Litre</item>
+        <item>Kilolitre</item>
+        <item>Imperial Gallon</item>
+        <item>US Gallon</item>
+        <item>Imperial Pint</item>
+        <item>US Pint</item>
+    </string-array>
 
 </resources>

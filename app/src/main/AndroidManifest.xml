@@ -81,6 +81,11 @@
             android:label="Speed">
 
         </activity>
+        <activity android:name=".Volume"
+            android:exported="true"
+            android:label="Volume">
+
+        </activity>
     </application>
 
 </manifest>

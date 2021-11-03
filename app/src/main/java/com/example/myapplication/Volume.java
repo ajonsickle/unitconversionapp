@@ -11,14 +11,17 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+
 import com.google.android.material.textfield.TextInputEditText;
 
-public class Length extends Activity {
+public class Volume extends Activity{
+
     private Spinner convertFromSpinner;
     private TextInputEditText convertFromValueInput;
     private TextView resultTextView;
     private Spinner resultSpinner;
-    public double convertToMetres(Spinner a, TextInputEditText b) {
+    public double convertToCubicMetres(Spinner a, TextInputEditText b) {
         try {
             String input = b.getText().toString().trim();
             if (input.isEmpty()) {
@@ -26,44 +29,51 @@ public class Length extends Activity {
             }
             double d = 0.0;
             switch (a.getSelectedItem().toString()) {
-                case "Inches":
-                    d = Double.parseDouble(input) / 39.37;
-                    break;
-                case "Metres":
+                case "Cubic Metres":
                     d = Double.parseDouble(input);
                     break;
-                case "Centimetres":
-                    d = Double.parseDouble(input) / 100;
+                case "Cubic Miles":
+                    d = Double.parseDouble(input) * (4.168e+9);
                     break;
-                case "Millimetres":
+                case "Cubic Yards":
+                    d = Double.parseDouble(input) / 1.308;
+                    break;
+                case "Cubic Kilometres":
+                    d = Double.parseDouble(input) * 1e+9;
+                    break;
+                case "Cubic Centimetres":
+                case "Millilitres":
+                    d = Double.parseDouble(input) / 1e+6;
+                    break;
+                case "Cubic Millimetres":
+                    d = Double.parseDouble(input) / 1e+9;
+                    break;
+                case "Cubic Feet":
+                    d = Double.parseDouble(input) / 35.315;
+                    break;
+                case "Cubic Inches":
+                    d = Double.parseDouble(input)  / 61024;
+                    break;
+                case "Acre-feet":
+                    d = Double.parseDouble(input) * 1233;
+                    break;
+                case "Centilitres":
+                    d = Double.parseDouble(input) / 100000;
+                    break;
+                case "Litres":
                     d = Double.parseDouble(input) / 1000;
                     break;
-                case "Feet":
-                    d = Double.parseDouble(input) / 3.281;
+                case "Imperial Gallon":
+                    d = Double.parseDouble(input) / 220;
                     break;
-                case "Yards":
-                    d = Double.parseDouble(input) * 0.9144;
+                case "US Gallon":
+                    d = Double.parseDouble(input) / 264;
                     break;
-                case "Gigametres":
-                    d = Double.parseDouble(input) * 1000000000;
+                case "Imperial Pint":
+                    d = Double.parseDouble(input) / 1760;
                     break;
-                case "Megametres":
-                    d = Double.parseDouble(input) * 1000000;
-                    break;
-                case "Kilometres":
-                    d = Double.parseDouble(input) * 1000;
-                    break;
-                case "Decimetres":
-                    d = Double.parseDouble(input) * 10;
-                    break;
-                case "Micrometres":
-                    d = Double.parseDouble(input) / 1000000;
-                    break;
-                case "Nanometres":
-                    d = Double.parseDouble(input) / 1000000000;
-                    break;
-                case "Miles":
-                    d = Double.parseDouble(input) * 1609;
+                case "US Pint":
+                    d = Double.parseDouble(input) / 2113;
                     break;
                 default:
                     d = 0;
@@ -75,47 +85,54 @@ public class Length extends Activity {
             return 0;
         }
     }
-    public double convertFromMetres(Spinner a, double b) {
+    public double convertFromCubicMetres(Spinner a, double b) {
         double d = 0.0;
         switch (a.getSelectedItem().toString()) {
-            case "Inches":
-                d = b * 39.37;
-                break;
-            case "Metres":
+            case "Cubic Metres":
                 d = b;
                 break;
-            case "Centimetres":
-                d = b * 100;
+            case "Cubic Miles":
+                d = b / (4.168e+9);
                 break;
-            case "Millimetres":
+            case "Cubic Yards":
+                d = b * 1.308;
+                break;
+            case "Cubic Kilometres":
+                d = b / 1e+9;
+                break;
+            case "Cubic Centimetres":
+            case "Millilitres":
+                d = b * 1e+6;
+                break;
+            case "Cubic Millimetres":
+                d = b * 1e+9;
+                break;
+            case "Cubic Feet":
+                d = b * 35.315;
+                break;
+            case "Cubic Inches":
+                d = b * 61024;
+                break;
+            case "Acre-feet":
+                d = b / 1233;
+                break;
+            case "Centilitres":
+                d = b * 100000;
+                break;
+            case "Litres":
                 d = b * 1000;
                 break;
-            case "Feet":
-                d = b * 3.281;
+            case "Imperial Gallon":
+                d = b * 220;
                 break;
-            case "Yards":
-                d = b / 0.9144;
+            case "US Gallon":
+                d = b * 264;
                 break;
-            case "Gigametres":
-                d = b / 1000000000;
+            case "Imperial Pint":
+                d = b * 1760;
                 break;
-            case "Megametres":
-                d = b / 1000000;
-                break;
-            case "Kilometres":
-                d = b / 1000;
-                break;
-            case "Decimetres":
-                d = b * 10;
-                break;
-            case "Micrometres":
-                d = b * 1000000;
-                break;
-            case "Nanometres":
-                d = b * 1000000000;
-                break;
-            case "Miles":
-                d = b / 1609;
+            case "US Pint":
+                d = b * 2113;
                 break;
             default:
                 d = 0;
@@ -128,9 +145,9 @@ public class Length extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_generic);
 
-        ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.convertFromLengthArray, android.R.layout.simple_spinner_item);
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.volumeArray, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        ArrayAdapter adapter1 = ArrayAdapter.createFromResource(this, R.array.convertFromLengthArray, android.R.layout.simple_spinner_item);
+        ArrayAdapter adapter1 = ArrayAdapter.createFromResource(this, R.array.volumeArray, android.R.layout.simple_spinner_item);
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         convertFromSpinner = (Spinner)findViewById(R.id.convertFromSpinner);
@@ -139,7 +156,7 @@ public class Length extends Activity {
         resultSpinner.setAdapter(adapter1);
         resultTextView = findViewById(R.id.resultTextView);
         convertFromValueInput = findViewById(R.id.enterConvertFromValueEditText);
-        DecimalFormat format = new DecimalFormat("#.####");
+        DecimalFormat format = new DecimalFormat("#.########");
         convertFromValueInput.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -148,7 +165,7 @@ public class Length extends Activity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                resultTextView.setText(format.format(convertFromMetres(resultSpinner, convertToMetres(convertFromSpinner, convertFromValueInput))));
+                resultTextView.setText(format.format(convertFromCubicMetres(resultSpinner, convertToCubicMetres(convertFromSpinner, convertFromValueInput))));
 
             }
 
@@ -160,10 +177,10 @@ public class Length extends Activity {
         convertFromSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                resultTextView.setText(format.format(convertFromMetres(resultSpinner, convertToMetres(convertFromSpinner, convertFromValueInput))));
+                resultTextView.setText(format.format(convertFromCubicMetres(resultSpinner, convertToCubicMetres(convertFromSpinner, convertFromValueInput))));
             }
-
             @Override
+
             public void onNothingSelected(AdapterView<?> adapterView) {
 
             }
@@ -171,7 +188,7 @@ public class Length extends Activity {
         resultSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                resultTextView.setText(format.format(convertFromMetres(resultSpinner, convertToMetres(convertFromSpinner, convertFromValueInput))));
+                resultTextView.setText(format.format(convertFromCubicMetres(resultSpinner, convertToCubicMetres(convertFromSpinner, convertFromValueInput))));
             }
 
             @Override
@@ -179,6 +196,5 @@ public class Length extends Activity {
 
             }
         });
-
     }
 }
