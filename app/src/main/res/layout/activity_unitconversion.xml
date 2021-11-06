@@ -11,6 +11,7 @@
         android:drawableTop="@drawable/ruler"
         android:text="@string/length"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="200dp"
         android:id="@+id/lengthButton"/>
     <Button
         android:layout_width="wrap_content"
@@ -18,6 +19,7 @@
         android:drawableTop="@drawable/ic_action_name"
         android:text="@string/area"
         android:layout_marginLeft="105dp"
+        android:layout_marginTop="200dp"
         android:id="@+id/areaButton"/>
     <Button
         android:layout_width="wrap_content"
@@ -25,6 +27,7 @@
         android:drawableTop="@drawable/calendar"
         android:text="@string/dates"
         android:layout_marginLeft="195dp"
+        android:layout_marginTop="200dp"
         android:id="@+id/datesButton"/>
     <Button
         android:layout_width="wrap_content"
@@ -32,12 +35,13 @@
         android:drawableTop="@drawable/scale"
         android:text="@string/bmi"
         android:layout_marginLeft="285dp"
+        android:layout_marginTop="200dp"
         android:id="@+id/bmiButton"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableTop="@drawable/base"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="275dp"
         android:text="@string/base"
         android:layout_marginLeft="15dp"
         android:id="@+id/baseNButton"/>
@@ -45,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableTop="@drawable/thermometer"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="275dp"
         android:text="Temp"
         android:layout_marginLeft="105dp"
         android:id="@+id/tempButton"/>
@@ -53,7 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableTop="@drawable/clock"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="275dp"
         android:text="Time"
         android:layout_marginLeft="195dp"
         android:id="@+id/timeButton"/>
@@ -61,7 +65,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableTop="@drawable/data"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="275dp"
         android:text="Data"
         android:layout_marginLeft="285dp"
         android:id="@+id/dataButton"/>
@@ -71,7 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="350dp"
         android:drawableTop="@drawable/dollar"
         android:text="money" />
     <Button
@@ -79,7 +83,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="105dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="350dp"
         android:drawableTop="@drawable/speed"
         android:text="Speed" />
     <Button
@@ -87,8 +91,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="195dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="350dp"
         android:drawableTop="@drawable/volume"
         android:text="Volume" />
+    <Button
+        android:id="@+id/massButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="285dp"
+        android:layout_marginTop="350dp"
+        android:drawableTop="@drawable/mass"
+        android:text="Mass" />
 
 </RelativeLayout>

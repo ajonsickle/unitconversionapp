@@ -132,5 +132,16 @@
         <item>Imperial Pint</item>
         <item>US Pint</item>
     </string-array>
+    <string-array name="massArray">
+        <item>Milligrams</item>
+        <item>Grams</item>
+        <item>Kilograms</item>
+        <item>Tonnes</item>
+        <item>US Tons</item>
+        <item>UK Tons</item>
+        <item>Pounds</item>
+        <item>Stone</item>
+        <item>Ounces</item>
+    </string-array>
 
 </resources>

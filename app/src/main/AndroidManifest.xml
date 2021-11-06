@@ -86,6 +86,11 @@
             android:label="Volume">
 
         </activity>
+        <activity android:name=".Mass"
+            android:exported="true"
+            android:label="Mass">
+
+        </activity>
     </application>
 
 </manifest>
