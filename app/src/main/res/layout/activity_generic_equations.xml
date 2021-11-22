@@ -29,6 +29,32 @@
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/enterConvertFromValueInput"
         android:layout_marginTop="20dp"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/enterConvertFromValueInput2"
+        android:layout_width="300dp"
+        android:layout_marginTop="60dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_value_to_convert_from"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_marginTop="60dp"
+            android:inputType="numberSigned|numberDecimal"
+            android:id="@+id/enterConvertFromValueEditText2"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <Spinner
+        android:id="@+id/convertFromSpinner2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+
+        android:layout_toRightOf="@+id/enterConvertFromValueInput"
+        android:layout_marginTop="80dp"/>
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -45,8 +71,5 @@
         android:layout_centerInParent="true"
         android:layout_marginTop="250dp"
         />
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
 
 </RelativeLayout>

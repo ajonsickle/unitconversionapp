@@ -5,9 +5,113 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".Equations">
 
-    <TextView
+    <Button
+        android:id="@+id/speedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="hello"/>
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="200dp"
+        android:drawableTop="@drawable/speed"
+        android:text="Speed" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/ironbar"
+        android:text="Force"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="200dp"
+        android:id="@+id/forceButton"/>
+
+    <Button
+        android:id="@+id/pressureButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="195dp"
+        android:layout_marginTop="200dp"
+        android:height="63dp"
+        android:drawableTop="@drawable/pressuregauge"
+        android:text="Pressure"
+        android:textSize="13dp" />
+
+    <Button
+        android:id="@+id/powerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="285dp"
+        android:layout_marginTop="200dp"
+        android:drawableTop="@drawable/power"
+        android:text="Power" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/acceleration"
+        android:layout_marginTop="275dp"
+        android:text="ACCEL"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/accelerationButton"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/density"
+        android:layout_marginTop="275dp"
+        android:text="Density"
+        android:layout_marginLeft="105dp"
+        android:id="@+id/densityButton"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/voltage"
+        android:layout_marginTop="275dp"
+        android:text="voltage"
+        android:layout_marginLeft="195dp"
+        android:id="@+id/voltageButton"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/frequency"
+        android:layout_marginTop="275dp"
+        android:text="Freq"
+        android:layout_marginLeft="285dp"
+        android:id="@+id/frequencyButton"/>
+
+    <Button
+        android:id="@+id/keButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="350dp"
+        android:drawableTop="@drawable/ke"
+        android:text="KE" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/weight"
+        android:text="Weight"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="350dp"
+        android:id="@+id/weightButton"/>
+
+    <Button
+        android:id="@+id/momentumButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="195dp"
+        android:layout_marginTop="350dp"
+        android:drawableTop="@drawable/momentum"
+        android:text="Momentum"
+        android:textSize="11dp"
+        android:height="62dp"/>
+    <Button
+        android:id="@+id/chargeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="285dp"
+        android:layout_marginTop="350dp"
+        android:drawableTop="@drawable/charge"
+        android:text="Charge"
+        android:textSize="14dp"
+        android:height="62dp"/>
+
 
 </RelativeLayout>

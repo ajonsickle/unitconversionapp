@@ -6,6 +6,9 @@
     <style name="Theme.UnitConversion" parent="Theme.AppCompat">
 
     </style>
+    <style name="Theme.Equations" parent="Theme.AppCompat">
+
+    </style>
     <style name="Theme.Calculator" parent="Theme.AppCompat.Light.NoActionBar">
 
     </style>

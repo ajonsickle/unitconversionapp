@@ -51,7 +51,7 @@ public class BMI extends Activity {
         bmiTextView = findViewById(R.id.bmiTextView);
         bmiCategory = findViewById(R.id.bmiCategory);
         bmiprogressbar = findViewById(R.id.bmiprogressbar);
-        ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.weightArray, android.R.layout.simple_spinner_item);
+        ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.bmiArray, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         ArrayAdapter adapter1 = ArrayAdapter.createFromResource(this, R.array.heightArray, android.R.layout.simple_spinner_item);
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

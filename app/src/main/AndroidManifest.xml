@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplication">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -25,7 +27,8 @@
         </activity>
         <activity android:name=".Equations"
             android:exported="true"
-            android:label="@string/equations">
+            android:label="@string/equations"
+            android:theme="@style/Theme.Equations">
         </activity>
         <activity android:name = ".Area">
             android:exported="true"
@@ -89,6 +92,71 @@
         <activity android:name=".Mass"
             android:exported="true"
             android:label="Mass">
+
+        </activity>
+        <activity android:name=".Velocity"
+            android:exported="true"
+            android:label="Velocity">
+
+        </activity>
+        <activity android:name=".Force"
+            android:exported="true"
+            android:label="Force">
+
+        </activity>
+        <activity android:name=".Pressure"
+            android:exported="true"
+            android:label="Pressure">
+
+        </activity>
+        <activity android:name=".Power"
+            android:exported="true"
+            android:label="Power">
+
+        </activity>
+        <activity android:name=".Acceleration"
+            android:exported="true"
+            android:label="Acceleration">
+
+        </activity>
+        <activity android:name=".Density"
+            android:exported="true"
+            android:label="Density">
+
+        </activity>
+        <activity android:name=".Voltage"
+            android:exported="true"
+            android:label="Voltage">
+
+        </activity>
+        <activity android:name=".Frequency"
+            android:exported="true"
+            android:label="Frequency">
+
+        </activity>
+        <activity android:name=".Frequency1"
+            android:exported="true"
+            android:label="Frequency1">
+
+        </activity>
+        <activity android:name=".KE"
+            android:exported="true"
+            android:label="KE">
+
+        </activity>
+        <activity android:name=".Weight"
+            android:exported="true"
+            android:label="Weight">
+
+        </activity>
+        <activity android:name=".Momentum"
+            android:exported="true"
+            android:label="Momentum">
+
+        </activity>
+        <activity android:name=".Charge"
+            android:exported="true"
+            android:label="Charge">
 
         </activity>
     </application>
