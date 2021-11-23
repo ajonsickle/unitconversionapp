@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.myapplication">
+    package="com.example.myapplication"
+    >
+
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -13,7 +15,8 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.MyApplication">
+            android:theme="@style/Theme.MyApplication"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,140 +26,168 @@
         <activity android:name=".UnitConversion"
             android:label="@string/unit_conversion"
             android:theme="@style/Theme.UnitConversion"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
         </activity>
         <activity android:name=".Equations"
             android:exported="true"
             android:label="@string/equations"
-            android:theme="@style/Theme.Equations">
+            android:theme="@style/Theme.Equations"
+            android:screenOrientation="portrait">
         </activity>
         <activity android:name = ".Area">
             android:exported="true"
-            android:label="Area">
+            android:label="Area"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:exported="true"
             android:name=".Length"
-            android:label="@string/length">
+            android:label="@string/length"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity
             android:exported="true"
             android:name=".Calculator"
-            android:label="@string/calculator">
+            android:label="@string/calculator"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity
             android:exported="true"
             android:name=".Dates"
-            android:label="Dates">
+            android:label="Dates"
+            android:screenOrientation="portrait">
         </activity>
         <activity android:name=".BMI"
             android:exported="true"
-            android:label="BMI">
+            android:label="BMI"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".Base"
             android:exported="true"
-            android:label="Base">
+            android:label="Base"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".Temp"
             android:exported="true"
-            android:label="Temp">
+            android:label="Temp"
+            android:screenOrientation="portrait">
         </activity>
         <activity android:name=".Time"
             android:exported="true"
-            android:label="Time">
+            android:label="Time"
+            android:screenOrientation="portrait">
         </activity>
         <activity android:name=".Data"
             android:exported="true"
-            android:label="Data">
+            android:label="Data"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".Money"
             android:exported="true"
-            android:label="Money">
+            android:label="Money"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".Speed"
             android:exported="true"
-            android:label="Speed">
+            android:label="Speed"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".Volume"
             android:exported="true"
-            android:label="Volume">
+            android:label="Volume"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".Mass"
             android:exported="true"
-            android:label="Mass">
+            android:label="Mass"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".Velocity"
             android:exported="true"
-            android:label="Velocity">
+            android:label="Velocity"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".Force"
             android:exported="true"
-            android:label="Force">
+            android:label="Force"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".Pressure"
             android:exported="true"
-            android:label="Pressure">
+            android:label="Pressure"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".Power"
             android:exported="true"
-            android:label="Power">
+            android:label="Power"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".Acceleration"
             android:exported="true"
-            android:label="Acceleration">
+            android:label="Acceleration"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".Density"
             android:exported="true"
-            android:label="Density">
+            android:label="Density"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".Voltage"
             android:exported="true"
-            android:label="Voltage">
+            android:label="Voltage"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".Frequency"
             android:exported="true"
-            android:label="Frequency">
+            android:label="Frequency"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".Frequency1"
             android:exported="true"
-            android:label="Frequency1">
+            android:label="Frequency1"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".KE"
             android:exported="true"
-            android:label="KE">
+            android:label="KE"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".Weight"
             android:exported="true"
-            android:label="Weight">
+            android:label="Weight"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".Momentum"
             android:exported="true"
-            android:label="Momentum">
+            android:label="Momentum"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity android:name=".Charge"
             android:exported="true"
-            android:label="Charge">
+            android:label="Charge"
+            android:screenOrientation="portrait">
 
         </activity>
     </application>
