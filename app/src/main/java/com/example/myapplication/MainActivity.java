@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         calculatorButton = findViewById(R.id.calculatorButton);
         unitConversionBtn = findViewById(R.id.unitConversionButton);

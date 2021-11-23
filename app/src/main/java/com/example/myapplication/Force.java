@@ -8,6 +8,7 @@ import android.text.TextWatcher;
 import java.lang.reflect.Array;
 import java.text.DecimalFormat;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
@@ -85,6 +86,7 @@ public class Force extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_generic_multiple_equations);
 
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.forceEquationArray, android.R.layout.simple_spinner_item);

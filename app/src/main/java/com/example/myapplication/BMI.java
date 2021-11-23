@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -43,6 +44,7 @@ public class BMI extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_bmi);
         weightInput = findViewById(R.id.weightInput);
         heightInput = findViewById(R.id.heightInput);
@@ -50,7 +52,6 @@ public class BMI extends Activity {
         heightSpinner = findViewById(R.id.heightSpinner);
         bmiTextView = findViewById(R.id.bmiTextView);
         bmiCategory = findViewById(R.id.bmiCategory);
-        bmiprogressbar = findViewById(R.id.bmiprogressbar);
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.bmiArray, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         ArrayAdapter adapter1 = ArrayAdapter.createFromResource(this, R.array.heightArray, android.R.layout.simple_spinner_item);

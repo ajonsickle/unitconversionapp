@@ -9,6 +9,7 @@ import android.text.TextWatcher;
 import java.io.Serializable;
 import java.text.DecimalFormat;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -72,6 +73,7 @@ public class Base extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_generic);
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.baseArray, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
