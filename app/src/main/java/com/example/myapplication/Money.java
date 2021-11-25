@@ -101,8 +101,8 @@ public class Money extends Activity {
     }
     public void mainFunction(ArrayAdapter adapter) {
         try {
-
-                URL url = new URL("https://freecurrencyapi.net/api/v2/latest?apikey=1c274cc0-4bd5-11ec-b7a9-7fce6f2d5157&base_currency=" + convertFromSpinner.getSelectedItem());
+                Keys apiKey = new Keys();
+                URL url = new URL("https://freecurrencyapi.net/api/v2/latest?apikey=" + apiKey.getCurrencyapiKey() + "&base_currency=" + convertFromSpinner.getSelectedItem());
                 HttpURLConnection connection = (HttpURLConnection)url.openConnection();
                 StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(policy);
