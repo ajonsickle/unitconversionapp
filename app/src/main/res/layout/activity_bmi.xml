@@ -6,38 +6,47 @@
     tools:context=".Length"
     android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
 
-    <EditText
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Enter Weight"
-        android:id="@+id/weightInput"
-        android:background="@drawable/weight_background"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="50dp"
-        android:width="131dp"
-        android:inputType="numberDecimal"/>
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Enter Height"
-        android:id="@+id/heightInput"
-        android:background="@drawable/weight_background"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="150dp"
-        android:width="130dp"
-        android:inputType="numberDecimal"/>
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
-        android:layout_marginLeft="250dp"
-        android:id="@+id/weightSpinner"/>
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="165dp"
-        android:layout_marginLeft="250dp"
-        android:id="@+id/heightSpinner" />
+        android:layout_centerHorizontal="true">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter Weight"
+            android:id="@+id/weightInput"
+            android:background="@drawable/weight_background"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="50dp"
+            android:width="131dp"
+            android:inputType="numberDecimal"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter Height"
+            android:id="@+id/heightInput"
+            android:background="@drawable/weight_background"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="150dp"
+            android:width="130dp"
+            android:inputType="numberDecimal"/>
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            android:layout_marginLeft="250dp"
+            android:id="@+id/weightSpinner"/>
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="165dp"
+            android:layout_marginLeft="250dp"
+            android:id="@+id/heightSpinner" />
+    </RelativeLayout>
+
+
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

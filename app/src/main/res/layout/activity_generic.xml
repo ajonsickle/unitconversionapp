@@ -6,29 +6,37 @@
     tools:context=".Length"
     android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/enterConvertFromValueInput"
-        android:layout_width="300dp"
+    <RelativeLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/enter_value_to_convert_from"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
+        android:layout_centerHorizontal="true">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/enterConvertFromValueInput"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:singleLine="true"
-            android:inputType="numberSigned|numberDecimal"
-            android:id="@+id/enterConvertFromValueEditText"
-            />
+            android:hint="@string/enter_value_to_convert_from"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
 
-    </com.google.android.material.textfield.TextInputLayout>
-    <Spinner
-        android:id="@+id/convertFromSpinner"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/enterConvertFromValueInput"
-        android:layout_marginTop="20dp"/>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:inputType="numberSigned|numberDecimal"
+                android:id="@+id/enterConvertFromValueEditText"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <Spinner
+            android:id="@+id/convertFromSpinner"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/enterConvertFromValueInput"
+            android:layout_marginTop="20dp"/>
+    </RelativeLayout>
+
+
+
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

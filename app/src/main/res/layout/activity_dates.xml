@@ -6,94 +6,113 @@
     tools:context=".Length"
     android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Starting Date: "
-        android:id="@+id/startingDateText"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="75dp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="End Date: "
-        android:id="@+id/endingDateText"
-        android:layout_marginTop="110dp"
-        android:layout_marginLeft="75dp"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="220dp"
-        android:text=""
-        android:layout_marginTop="37dp"
-        android:id="@+id/startingDate"
-        style="?android:spinnerStyle"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="220dp"
-        android:text=""
-        android:layout_marginTop="97dp"
-        android:id="@+id/endingDate"
-        style="?android:spinnerStyle"/>
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Starting Date: "
+            android:id="@+id/startingDateText"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="75dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="End Date: "
+            android:id="@+id/endingDateText"
+            android:layout_marginTop="110dp"
+            android:layout_marginLeft="75dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="220dp"
+            android:text=""
+            android:layout_marginTop="37dp"
+            android:id="@+id/startingDate"
+            style="?android:spinnerStyle"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="220dp"
+            android:text=""
+            android:layout_marginTop="97dp"
+            android:id="@+id/endingDate"
+            style="?android:spinnerStyle"/>
+    </RelativeLayout>
 
-    <View
-        android:layout_width="300dp"
-        android:layout_height="200dp"
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="325dp"
-        android:background="@drawable/birthday_view_background"
+        android:layout_marginTop="325dp">
+        <View
+            android:layout_width="330dp"
+            android:layout_height="200dp"
+            android:background="@drawable/birthday_view_background"
+            android:id="@+id/view"
+            />
+        <TextView
+            android:id="@+id/weeks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/months"
+            android:layout_marginLeft="50dp"
+            android:layout_toRightOf="@+id/months"
+            android:text="Weeks:"
+            android:textStyle="bold" />
 
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="275dp"
-        android:layout_marginTop="350dp"
-        android:text="Weeks:"
-        android:textStyle="bold"
-        android:id="@+id/weeks"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="75dp"
-        android:layout_marginTop="350dp"
-        android:text="Years:"
-        android:textStyle="bold"
-        android:id="@+id/years"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="170dp"
-        android:layout_marginTop="350dp"
-        android:text="Months:"
-        android:textStyle="bold"
-        android:id="@+id/months"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="75dp"
-        android:layout_marginTop="430dp"
-        android:text="Days:"
-        android:textStyle="bold"
-        android:id="@+id/days"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="170dp"
-        android:layout_marginTop="430dp"
-        android:text="Hours:"
-        android:textStyle="bold"
-        android:id="@+id/hours"/>
+        <TextView
+            android:id="@+id/years"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/months"
+            android:layout_toLeftOf="@id/months"
+            android:layout_marginRight="50dp"
+            android:text="Years:"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Months:"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:id="@+id/months"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Days:"
+            android:layout_below="@id/years"
+            android:layout_alignLeft="@id/years"
+            android:layout_marginTop="80dp"
+            android:textStyle="bold"
+            android:id="@+id/days"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/months"
+            android:layout_alignLeft="@id/months"
+            android:text="Hours:"
+            android:textStyle="bold"
+            android:layout_marginTop="80dp"
+            android:id="@+id/hours"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="275dp"
-        android:layout_marginTop="430dp"
-        android:text="Minutes:"
-        android:textStyle="bold"
-        android:id="@+id/minutes"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/weeks"
+            android:layout_alignLeft="@id/weeks"
+            android:layout_marginTop="80dp"
+            android:text="Minutes:"
+            android:textStyle="bold"
+            android:id="@+id/minutes"/>
+    </RelativeLayout>
+
+
 
     
     
